@@ -39,10 +39,10 @@ class Product_model extends CI_Model
             return $query->row();
         }
     }
-    function update($postData,$id)
+    function update($post_data,$id)
     {
         $product_id = ['id = ' => $id];
-        $this->db->set($postData);       
+        $this->db->set($post_data);       
         $this->db->where($product_id);
         $this->db->update('products');
         
