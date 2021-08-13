@@ -34,7 +34,7 @@ class Product_model extends CI_Model
             $query = $this->db->get();
        
         if ($query->num_rows() < 1) {
-            return null;
+            return 0;
         } else {
             return $query->row();
         }
