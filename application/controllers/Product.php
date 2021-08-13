@@ -30,16 +30,17 @@ class Product extends CI_Controller
         $id = $this->input->get('id');
         $data['product'] = $this->Product_model->getDataForUpdate($id);
         $this->load->view('update_product', $data);
-       
     }
-    public function update(){
+    public function update()
+    {
         $this->load->model('Product_model');
         $id = $this->input->get('id');
         $post_data = $this->input->post();
-        $this->Product_model->update($post_data,$id);
+        $this->Product_model->update($post_data, $id);
         redirect('Product');
     }
-    public function delete(){
+    public function delete()
+    {
         $this->load->model('Product_model');
         $id = $this->input->get("id");
         $this->Product_model->delete($id);

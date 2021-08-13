@@ -1,18 +1,17 @@
-
 <?php include('top.php') ?>
 <?php
-        $product_name = $product->product_name;
-        $standard_cost = $product->standard_cost;
-        $list_price = $product->list_price;
-        $category = $product->category;
-        $product_id = $product->id;
- ?>
+$product_name = $product->product_name;
+$standard_cost = $product->standard_cost;
+$list_price = $product->list_price;
+$category = $product->category;
+$product_id = $product->id;
+?>
 
 <body>
 
     <div class="container mt-2">
         <h2>Update product</h2>
-        <form action="<?= base_url('Product/update?id='. $product_id) ?>" method="post" class="needs-validation" novalidate>
+        <form action="<?= base_url('Product/update?id=' . $product_id) ?>" method="post" class="needs-validation" novalidate>
             <div class="form-group">
                 <label for="pname">Product Name</label>:</label>
                 <input type="text" class="form-control" id="pname" value="<?php echo $product_name ?>" name="product_name" required>
@@ -37,8 +36,8 @@
                 <div class="valid-feedback">Valid.</div>
                 <div class="invalid-feedback">Please fill out this field.</div>
             </div>
-           
-         
+
+
             <button type="submit" class="btn btn-primary float-right">Submit</button>
             <a href="<?= base_url('Product') ?>"><button type="button" class="btn btn-success float-right mr-2">Cancel</button></a>
         </form>
