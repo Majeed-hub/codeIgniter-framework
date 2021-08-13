@@ -6,7 +6,7 @@ class Product extends CI_Controller
     public function index()
     {
         $this->load->model('Product_model');
-        $data['products'] = $this->Product_model->get_all(null);
+        $data['product'] = $this->Product_model->get_all(null);
         $this->load->view('products', $data);
     }
 
@@ -35,8 +35,8 @@ class Product extends CI_Controller
     public function update(){
         $this->load->model('Product_model');
         $id = $this->input->get("id");
-        $postData = $this->input->post();
-        $this->Product_model->update($postData,$id);
+        $post_data = $this->input->post();
+        $this->Product_model->update($post_data,$id);
         redirect('Product');
     }
     public function delete(){
