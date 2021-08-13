@@ -1,14 +1,12 @@
 
 <?php include('top.php') ?>
 <?php
-
-foreach ($products as $product){
         $product_name = $product->product_name;
         $standard_cost = $product->standard_cost;
         $list_price = $product->list_price;
         $category = $product->category;
         $product_id = $product->id;
-} ?>
+ ?>
 
 <body>
 
