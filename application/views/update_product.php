@@ -1,6 +1,5 @@
 <?php include('top.php') ?>
 <body>
-
     <div class="container mt-2">
         <h2>Update product</h2>
         <form action="<?= base_url('Product/update?id=' . $product->id) ?>" method="post" class="needs-validation" novalidate>
