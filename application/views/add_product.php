@@ -7,7 +7,8 @@
 
     <div class="container mt-2">
         <h2>Add product</h2>
-        <form action="<?= base_url('Product/create') ?>" method="post" class="needs-validation" novalidate>
+        <form action="<?= base_url('Product/create
+        ') ?>" method="post" class="needs-validation" novalidate>
             <div class="form-group">
                 <label for="pname">Product Name</label>:</label>
                 <input type="text" class="form-control" id="pname" placeholder="Enter Product name" name="product_name" required>
